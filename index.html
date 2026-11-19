@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d0e">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="VELORA — uma experiência automotiva conceitual. Explore os modelos fictícios S9 e X7 por todos os ângulos, incluindo interior e movimento.">
+  <title>VELORA | Beyond Motion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/s9-movimento-novo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="VELORA — página inicial">
+        <svg viewBox="0 0 40 36" width="30" height="27" fill="none" aria-hidden="true"><path d="M4 6 20 29 36 6M12 6l8 11L28 6" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <span>VELORA</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#modelos">Modelos</a>
+        <a href="#galeria">Explorar</a>
+        <a href="#filosofia">Nossa visão</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="#galeria">Explorar veículos</a>
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação para celular" hidden>
+      <a href="#modelos">Modelos</a>
+      <a href="#galeria">Explorar imagens</a>
+      <a href="#filosofia">Nossa visão</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero-media" src="assets/s9-movimento-novo.png" alt="Conceito VELORA S9 em movimento em uma estrada costeira" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content page-gutter">
+        <div class="eyebrow">VELORA CONCEPT STUDIO</div>
+        <h1 id="hero-title">O futuro não<br>espera. <em>Avança.</em></h1>
+        <p>Uma nova visão de movimento. Dois conceitos elétricos, uma identidade criada para ir além do previsível.</p>
+        <div class="hero-actions">
+          <a href="#modelos" class="button button-solid">Conheça a coleção</a>
+          <a href="#galeria" class="button button-ghost">Explorar imagens</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section-pad page-gutter" id="modelos" aria-labelledby="models-title">
+      <div class="section-head intro-head">
+        <h2 id="models-title">A coleção</h2>
+        <p class="section-description">Dois conceitos elétricos, cada um com sua própria leitura do design automotivo.</p>
+      </div>
+      <div class="model-cards">
+        <article class="model-card" aria-labelledby="card-s9-title">
+          <img src="assets/s9-frontal.webp" alt="Sedã conceitual VELORA S9 em estúdio escuro" decoding="async">
+          <div class="model-card-bottom">
+            <div><h3 id="card-s9-title">VELORA <strong>S9</strong></h3><p class="card-label">Grand tourer elétrico</p></div>
+            <button type="button" class="card-action" data-select-model="s9" aria-label="Explorar as fotos do VELORA S9">Explorar modelo</button>
+          </div>
+        </article>
+        <article class="model-card" aria-labelledby="card-x7-title">
+          <img src="assets/hero-x7.webp" alt="SUV conceitual VELORA X7 em estúdio escuro" decoding="async">
+          <div class="model-card-bottom">
+            <div><h3 id="card-x7-title">VELORA <strong>X7</strong></h3><p class="card-label">SUV elétrico</p></div>
+            <button type="button" class="card-action" data-select-model="x7" aria-label="Explorar as fotos do VELORA X7">Explorar modelo</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery-section section-pad" id="galeria" aria-labelledby="gallery-title">
+      <div class="page-gutter gallery-heading">
+        <div class="section-head"><h2 id="gallery-title">Explore cada detalhe.</h2><p class="section-description">Escolha um modelo para ver a dianteira, o perfil, a traseira e a cabine.</p></div>
+        <div class="model-switch" role="tablist" aria-label="Selecionar veículo">
+          <button id="tab-s9" type="button" role="tab" aria-selected="true" aria-controls="gallery-panel" tabindex="0" class="model-tab active" data-model="s9">
+            <img class="model-tab-image" src="assets/s9-frontal-thumb.webp" alt="" width="380" height="214" decoding="async">
+            <span class="model-tab-info">
+              <span class="model-tab-name">VELORA S9</span>
+              <span class="model-tab-type">Grand tourer</span>
+            </span>
+          </button>
+          <button id="tab-x7" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel" tabindex="-1" class="model-tab" data-model="x7">
+            <img class="model-tab-image" src="assets/x7-frontal-thumb.webp" alt="" width="380" height="214" decoding="async">
+            <span class="model-tab-info">
+              <span class="model-tab-name">VELORA X7</span>
+              <span class="model-tab-type">SUV elétrico</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-container page-gutter">
+        <div id="gallery-panel" class="gallery-panel" role="tabpanel" aria-labelledby="tab-s9" tabindex="0">
+          <div class="gallery-topline"><div class="gallery-model"><span id="active-type">GRAND TOURER ELÉTRICO</span><h3 id="active-model">VELORA <strong>S9</strong></h3></div><div class="gallery-meta"><span class="gallery-meta-color"><span class="paint-dot" id="paint-dot"></span><span id="paint-name">GRAFITE LUNAR</span></span></div></div>
+          <div class="gallery-stage" id="gallery-stage" aria-label="Galeria do veículo. Deslize para mudar a imagem.">
+            <img id="gallery-image" class="gallery-main-image" src="assets/s9-frontal.webp" alt="Visão frontal 3/4 do VELORA S9" draggable="false">
+            <div class="gallery-controls" role="group" aria-label="Controles da galeria">
+              <button class="icon-button" id="gallery-prev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><path d="m15 5-7 7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button class="icon-button" id="gallery-next" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button class="icon-button expand-button" id="expand-image" type="button" aria-label="Ampliar foto atual"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M3 16v5h5m13-5v5h-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ampliar</span></button>
+            </div>
+          </div>
+          <div class="stage-caption">
+            <div><span class="eyebrow" id="image-type">EXTERIOR</span><div class="stage-title" id="image-title">Dianteira 3/4</div></div>
+          </div>
+          <div class="thumb-row" id="thumb-row" role="group" aria-label="Selecionar ângulo do veículo"></div>
+          <div class="gallery-footnote"><p id="gallery-description">Um grand tourer de proporções baixas, superfícies esculturais e cabine focada na experiência.</p><span>IMAGENS CONCEITUAIS GERADAS POR IA</span></div>
+<section class="specifications" aria-labelledby="specifications-title"><div class="specifications-head"><h4 id="specifications-title">Especificações técnicas</h4><span class="spec-edition">SÉRIE CONCEITUAL / ELÉTRICOS</span></div><div data-spec-model="s9">
+ <div class="spec-intro"><div><span class="eyebrow">VELORA S9 / ENGENHARIA CONCEITUAL</span><h5>Precisão que se sente.</h5></div><p>Resposta imediata, conforto envolvente e autonomia para prolongar a viagem.</p></div>
+ <dl class="spec-highlights"><div><dt>Potência combinada</dt><dd>470 <small>cv</small></dd></div>
+<div><dt>0 a 100 km/h</dt><dd>4,2 <small>s</small></dd></div>
+<div><dt>Autonomia conceitual</dt><dd>640 <small>km</small></dd></div></dl>
+ <dl class="spec-secondary"><div><dt>Torque combinado</dt><dd>720 <small>Nm</small></dd></div>
+<div><dt>Bateria útil</dt><dd>95 <small>kWh</small></dd></div>
+<div><dt>Recarga DC de pico</dt><dd>250 <small>kW</small></dd></div></dl>
+ <div class="spec-disclosures">
+ <details class="spec-disclosure" open><summary><span class="spec-disclosure-heading"><span class="spec-disclosure-title">Conforto e acabamento</span><span class="spec-disclosure-description">Materiais, climatização e bem-estar a bordo</span></span><span class="spec-toggle" aria-hidden="true"></span></summary><dl class="spec-equipment"><div><dt>Teto solar</dt><dd>Panorâmico com abertura elétrica e cortina interna.</dd></div>
+<div><dt>Ar-condicionado</dt><dd>Digital de três zonas, com saídas para os passageiros traseiros.</dd></div>
+<div><dt>Bancos climatizados</dt><dd>Dianteiros com ventilação, aquecimento, massagem e ajuste elétrico de 14 posições.</dd></div>
+<div><dt>Acabamento</dt><dd>Couro perfurado, costuras contrastantes e alumínio escovado.</dd></div></dl></details>
+ <details class="spec-disclosure"><summary><span class="spec-disclosure-heading"><span class="spec-disclosure-title">Tecnologia e assistência</span><span class="spec-disclosure-description">Conectividade, áudio e apoio ao motorista</span></span><span class="spec-toggle" aria-hidden="true"></span></summary><dl class="spec-equipment"><div><dt>Multimídia e instrumentos</dt><dd>Tela central de 15,6″, painel digital de 12,3″ e projeção de informações no para-brisa.</dd></div>
+<div><dt>Conectividade</dt><dd>Integração sem fio com smartphone, carregador por indução e quatro portas USB-C.</dd></div>
+<div><dt>Sistema de áudio</dt><dd>Som premium com 16 alto-falantes e subwoofer.</dd></div>
+<div><dt>Assistência ao motorista</dt><dd>Piloto automático adaptativo, centralização em faixa e frenagem autônoma de emergência.</dd></div>
+<div><dt>Estacionamento</dt><dd>Câmeras 360°, sensores dianteiros e traseiros e alerta de tráfego cruzado.</dd></div></dl></details>
+ <details class="spec-disclosure"><summary><span class="spec-disclosure-heading"><span class="spec-disclosure-title">Arquitetura e dimensões</span><span class="spec-disclosure-description">Tração, proporções e capacidade</span></span><span class="spec-toggle" aria-hidden="true"></span></summary><dl class="spec-equipment"><div><dt>Motorização e tração</dt><dd>Dois motores elétricos com tração integral e modos Eco, Comfort e Sport.</dd></div>
+<div><dt>Suspensão e rodas</dt><dd>Amortecedores adaptativos e rodas aerodinâmicas de 21″.</dd></div>
+<div><dt>Comprimento × largura × altura</dt><dd>4,98 × 1,96 × 1,43 m, sem retrovisores.</dd></div>
+<div><dt>Entre-eixos</dt><dd>3,02 m.</dd></div>
+<div><dt>Capacidade</dt><dd>Cinco lugares e porta-malas traseiro de 480 litros.</dd></div>
+<div><dt>Recarga AC</dt><dd>Até 11 kW, com programação de horário pelo sistema do veículo.</dd></div></dl></details>
+ </div></div>
+<div data-spec-model="x7" hidden>
+ <div class="spec-intro"><div><span class="eyebrow">VELORA X7 / ENGENHARIA CONCEITUAL</span><h5>Presença em cada jornada.</h5></div><p>Espaço para explorar, conforto para permanecer e força para seguir adiante.</p></div>
+ <dl class="spec-highlights"><div><dt>Potência combinada</dt><dd>420 <small>cv</small></dd></div>
+<div><dt>0 a 100 km/h</dt><dd>5,1 <small>s</small></dd></div>
+<div><dt>Autonomia conceitual</dt><dd>560 <small>km</small></dd></div></dl>
+ <dl class="spec-secondary"><div><dt>Torque combinado</dt><dd>680 <small>Nm</small></dd></div>
+<div><dt>Bateria útil</dt><dd>100 <small>kWh</small></dd></div>
+<div><dt>Recarga DC de pico</dt><dd>220 <small>kW</small></dd></div></dl>
+ <div class="spec-disclosures">
+ <details class="spec-disclosure" open><summary><span class="spec-disclosure-heading"><span class="spec-disclosure-title">Conforto e acabamento</span><span class="spec-disclosure-description">Materiais, climatização e bem-estar a bordo</span></span><span class="spec-toggle" aria-hidden="true"></span></summary><dl class="spec-equipment"><div><dt>Teto solar</dt><dd>Panorâmico com abertura elétrica e cortina interna de proteção solar.</dd></div>
+<div><dt>Ar-condicionado</dt><dd>Digital de quatro zonas, com controles independentes na segunda fileira.</dd></div>
+<div><dt>Bancos climatizados</dt><dd>Dianteiros ventilados e aquecidos, ajuste elétrico de 12 posições e memória para o motorista. Traseiros com aquecimento.</dd></div>
+<div><dt>Acabamento</dt><dd>Couro perfurado, madeira de poros abertos e iluminação ambiente regulável.</dd></div></dl></details>
+ <details class="spec-disclosure"><summary><span class="spec-disclosure-heading"><span class="spec-disclosure-title">Tecnologia e assistência</span><span class="spec-disclosure-description">Conectividade, áudio e apoio ao motorista</span></span><span class="spec-toggle" aria-hidden="true"></span></summary><dl class="spec-equipment"><div><dt>Multimídia e instrumentos</dt><dd>Tela central de 15,6″, painel digital de 12,3″ e comandos físicos de climatização.</dd></div>
+<div><dt>Conectividade</dt><dd>Integração sem fio com smartphone, carregador por indução e seis portas USB-C.</dd></div>
+<div><dt>Sistema de áudio</dt><dd>Som premium com 14 alto-falantes e subwoofer.</dd></div>
+<div><dt>Assistência ao motorista</dt><dd>Piloto automático adaptativo, centralização em faixa e frenagem autônoma de emergência.</dd></div>
+<div><dt>Estacionamento</dt><dd>Câmeras 360°, sensores de proximidade e alerta de tráfego cruzado traseiro.</dd></div></dl></details>
+ <details class="spec-disclosure"><summary><span class="spec-disclosure-heading"><span class="spec-disclosure-title">Arquitetura e versatilidade</span><span class="spec-disclosure-description">Tração, proporções e capacidade</span></span><span class="spec-toggle" aria-hidden="true"></span></summary><dl class="spec-equipment"><div><dt>Motorização e tração</dt><dd>Dois motores elétricos, tração integral e modos Eco, Comfort, Sport e Neve.</dd></div>
+<div><dt>Suspensão e rodas</dt><dd>Suspensão pneumática com ajuste de altura e rodas de 22″.</dd></div>
+<div><dt>Comprimento × largura × altura</dt><dd>4,92 × 2,00 × 1,76 m, sem retrovisores. Entre-eixos de 2,98 m.</dd></div>
+<div><dt>Capacidade</dt><dd>Cinco lugares, banco traseiro reclinável e rebatível em proporção 40/20/40.</dd></div>
+<div><dt>Porta-malas</dt><dd>650 litros, ampliáveis para 1.850 litros. Tampa elétrica com abertura por sensor.</dd></div>
+<div><dt>Recarga e energia</dt><dd>Recarga AC de até 11 kW e tomada externa V2L de até 3,6 kW.</dd></div></dl></details>
+ </div></div><p class="spec-note">Equipamentos e valores fictícios, criados para cada conceito. Autonomia e desempenho sem homologação.</p></section>
+          <p class="screen-reader-only" id="carousel-announcement" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-section page-gutter section-pad" id="detalhes" aria-labelledby="details-title">
+      <div class="section-head details-head"><h2 id="details-title">Da estrada à cabine</h2></div>
+      <div class="feature-grid">
+        <article class="feature">
+          <img id="motion-img" src="assets/s9-movimento-novo.png" alt="VELORA S9 em movimento" decoding="async">
+          <div class="feature-content">
+            <h3>A estrada como parte da história.</h3>
+            <button type="button" class="feature-button" data-open-view="3">Ver em movimento</button>
+          </div>
+        </article>
+        <article class="feature">
+          <img id="interior-img" src="assets/s9-interior-realista.jpg" alt="Interior do VELORA S9" decoding="async">
+          <div class="feature-content">
+            <h3>Um espaço para sentir o futuro.</h3>
+            <button type="button" class="feature-button" data-open-view="4">Explorar interior</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifesto page-gutter" id="filosofia" aria-labelledby="manifesto-title">
+      <div class="vision-background" aria-hidden="true">
+        <span class="vision-trail vision-trail-upper"></span>
+        <span class="vision-trail vision-trail-main"></span>
+        <span class="vision-trail vision-trail-lower"></span>
+      </div>
+      <div class="manifesto-inner">
+        <div class="eyebrow">NOSSA VISÃO</div>
+        <h2 id="manifesto-title">O movimento começa<br><em>com uma ideia.</em></h2>
+        <p>Na VELORA, imaginamos veículos que unem linhas marcantes, tecnologia e a liberdade de explorar novos caminhos. Cada conceito é um convite a olhar para a mobilidade com curiosidade e descobrir o que ela pode vir a ser.</p>
+        <p class="manifesto-note">Um estudo criativo: veículos, imagens e especificações são fictícios.</p>
+        <a href="#galeria" class="text-link">EXPLORAR OS CONCEITOS</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page-gutter"><div class="footer-main"><div><a href="#inicio" class="brand footer-brand"><svg viewBox="0 0 40 36" width="25" height="23" fill="none" aria-hidden="true"><path d="M4 6 20 29 36 6M12 6l8 11L28 6" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/></svg>VELORA</a><p>Beyond motion. Beyond ordinary.</p></div><div class="footer-links"><a href="#modelos">Modelos</a><a href="#galeria">Galeria</a><a href="#filosofia">Visão</a></div></div><div class="footer-bottom"><span>© 2026 VELORA CONCEPT STUDIO</span><span>Projeto fictício para estudo. Imagens produzidas com IA; podem existir diferenças entre ângulos.</span></div></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" tabindex="-1" hidden>
+    <div class="lightbox-bar"><span class="lightbox-brand">VELORA <span> / CONCEPT EXPLORER</span></span><button class="lightbox-close" id="lightbox-close" aria-label="Fechar visualização ampliada"><span>FECHAR</span> ✕</button></div>
+    <div class="lightbox-stage" id="lightbox-stage"><button class="lightbox-arrow" id="lightbox-prev" aria-label="Imagem anterior">←</button><img id="lightbox-image" alt="" draggable="false"><button class="lightbox-arrow" id="lightbox-next" aria-label="Próxima imagem">→</button></div>
+    <div class="lightbox-foot"><span id="lightbox-caption">VELORA S9 · DIANTEIRA 3/4</span></div>
+  </div>
+</body></html>
